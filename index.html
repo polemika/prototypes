@@ -42,6 +42,7 @@
 				<div id='dataviz'>
 				</div>
 			</div>
+			<button class="ici">ICI</button>
 		
         </div>
     </body>
@@ -56,6 +57,21 @@
 		}
 	</script>
 	<script>
+		$(".ici").unbind("click").bind("click", function() {
+			console("call ajax");
+			$.ajax({
+				type: 'GET',
+				url: "https://polemika.univ-paris8.fr/omk/api/items?item_set_id=2",
+				dataType: 'json',
+				success: function(object) {
+					console("ajax response");
+					console(object);
+				},
+				data: {},
+				async: true
+			});			
+		});
+		/*
 		try {
 			var useProxy = false;
 			var proto = new Proto(useProxy);
@@ -122,6 +138,7 @@
 		} catch(e) {
 			console.log("error", e);
 		}
+		*/
 	</script>
 	<!-- end of service worker -->	
 </html>
