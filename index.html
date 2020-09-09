@@ -57,8 +57,8 @@
 	</script>
 	<script>
 		try {
-			var local = true;
-			var proto = new Proto(local);
+			var useProxy = false;
+			var proto = new Proto(useProxy);
 			console.log("get information to display ...");
 			var info = proto.getOneInformation();
 			console.log(info);

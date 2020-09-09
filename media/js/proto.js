@@ -1,8 +1,8 @@
 class Proto {
 
-    constructor(useLocal) {
-		this.useLocal = useLocal ? useLocal : false;
-		this.useCorsProxy = true;
+    constructor(useCorsProxy) {
+		this.useLocal = false;
+		this.useCorsProxy = useCorsProxy;
 		this.geo = new Geo();
 		this.geo.getPosition(function(coords) {}); // just for ask the user for its approval when starting the app
         this.resultData = {
