@@ -58,14 +58,14 @@
 	</script>
 	<script>
 		$(".ici").unbind("click").bind("click", function() {
-			console("call ajax");
+			console.log("call ajax");
 			$.ajax({
 				type: 'GET',
 				url: "https://polemika.univ-paris8.fr/omk/api/items?item_set_id=2",
 				dataType: 'json',
 				success: function(object) {
-					console("ajax response");
-					console(object);
+					console.log("ajax response");
+					console.log(object);
 				},
 				data: {},
 				async: true
