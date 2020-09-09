@@ -34,18 +34,18 @@ class Proto {
         if (this.useLocal)
             return "http://127.0.0.1:8000/media_site/data/donnees.json";
         else
-            return "http://polemika.univ-paris8.fr/omk/api/items?item_set_id=2";
+            return "https://polemika.univ-paris8.fr/omk/api/items?item_set_id=2";
     }
     getMenuUrl() {
         if (this.useLocal)
             return "http://127.0.0.1:8000/media_site/data/dataMenuCirculaire.json";
         else
-            return "http://polemika.univ-paris8.fr/omk/api/items?resource_class_id=133";
+            return "https://polemika.univ-paris8.fr/omk/api/items?resource_class_id=133";
     }
     getOneInformation() {
         var self = this;
 		var url = this.getInformationUrl();
-		//var url = "http://polemika.univ-paris8.fr/omk/api/items?item_set_id=2";
+		//var url = "https://polemika.univ-paris8.fr/omk/api/items?item_set_id=2";
 		var informations = self.getSyncJson(url);
 		//$.getJSON(url, function(informations) {
 		var randomIndex = Math.floor(Math.random() * (informations.length-1));
