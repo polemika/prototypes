@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<button class="ici">TEST AJAX</button>
-			<button class="la">TEST GET</button>
+			<button class="la">TEST GET2</button>
 		
         </div>
     </body>
@@ -74,13 +74,9 @@
 		});
 		$(".la").unbind("click").bind("click", function() {
 			console.log("call get");
-			$.get({
-				url: "http://polemika.univ-paris8.fr/omk/api/items?item_set_id=2", 
-				data: {},
-				success: function( data ) { 
-					console.log("get response");
-					console.log(data);
-				}
+			$.get("http://polemika.univ-paris8.fr/omk/api/items?item_set_id=2", function(data) { 
+				console.log("get response");
+				console.log(data);
 			});
 		});
 		/*
